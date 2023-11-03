@@ -1,3 +1,21 @@
+# Marlin firmware configured for:
+
+* Ender 5 Plus
+* Micro Swiss hotend
+* SKR mini E3 V3.0
+
+## Building
+
+* install vscode and `auto build marlin` plugin
+* open this project
+* open `auto build marlin` window
+* build the STM32G0B1RE_btt env
+* copy `firmware.bin`` from ``.pio/build/STM32G0B1RE_btt/firmware.bin`` onto sd card
+* insert sd card into printer then turn on, wait 15-20 seconds. Do not power off.
+* reset all printer settings and save firmware defaults to EEPROM using `M502` then `M500`
+* run a PID tune of hot end and hotbed, save results to EEPROM: https://marlinfw.org/docs/gcode/M303.html
+* fine tune the Z axis offset between BL touch and hot end (use babysteps feature)
+
 <p align="center"><img src="buildroot/share/pixmaps/logo/marlin-outrun-nf-500.png" height="250" alt="MarlinFirmware's logo" /></p>
 
 <h1 align="center">Marlin 3D Printer Firmware</h1>
